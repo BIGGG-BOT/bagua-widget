@@ -1,0 +1,12 @@
+{
+  "name": "bagua-widget",
+  "version": "1.0.0",
+  "description": "桌面八卦旋转小挂件",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron": "^33.4.0"
+  }
+}

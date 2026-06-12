@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>八卦</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background: transparent;
+      overflow: hidden;
+      user-select: none;
+      font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
+      -webkit-app-region: drag;
+    }
+
+    /* Circular widget — flat, paper-like, no glow */
+    .widget {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: transparent;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      transform-origin: top center;
+      cursor: grab;
+      overflow: hidden;
+      -webkit-app-region: no-drag;
+    }
+
+    /* Rotating layer */
+    .rotator {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      will-change: transform;
+    }
+
+    canvas {
+      display: block;
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="widget" id="widget">
+    <div class="rotator" id="rotator">
+      <canvas id="baguaCanvas" width="200" height="200"></canvas>
+    </div>
+  </div>
+  <script src="renderer.js"></script>
+</body>
+</html>
